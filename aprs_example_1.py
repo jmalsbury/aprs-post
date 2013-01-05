@@ -1,4 +1,12 @@
-#This is a very simple example, originally provided by 
+#This is a very simple example
+#while loop connects to APRS server, and uploads position packet
+#Slight modifications to original code provided by Pete Loveall AE5PL
+#Source: http://www.tapr.org/pipermail/aprssig/2007-April/018541.html
+
+#NOTE: change callsigns and passwords for your own use.  
+
+#See readme for links to wiki that discuss getting a password
+
 
 import sys, time
 from socket import *
@@ -8,7 +16,7 @@ serverPort = 20157
 password = '12345'
 address = 'KI4MTT-1>APRS,TCPIP*:' 
 position = '=3349.14N/11153.56W-'
-# comment length is supposed to be 0 to 43 char. long-this is 53 char. but it works
+# comment length is supposed to be 0 to 43 char. 
 comment = 'KI4MTT Python Script'
 packet = ''
 delay = 15 # delay in seconds - 15 sec. is for testing- should be 20 to 30 min for fixed QTH
